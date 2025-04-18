@@ -9,7 +9,10 @@ class Table(models.Model):
     is_available = models.BooleanField(default=True)
     
     def __str__(self):
-        class Booking(models.Model):
+        return f"Table {self.table_number} (Capacity: {self.capacity})"
+
+#Booking model
+    class Booking(models.Model):
          user = models.ForeignKey(User, on_delete=models.CASCADE)
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
     booking_date = models.DateField()

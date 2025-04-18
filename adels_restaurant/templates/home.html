@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome to Adel's Restaurant{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center py-5 bg-light">
+    <h1 class="display-4">Welcome to Adel's Restaurant</h1>
+    <p class="lead">Experience fine dining with our exquisite menu and comfortable atmosphere.</p>
+    <hr class="my-4">
+    <p>Book a table now to secure your spot!</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'booking_create' %}" role="button">Book a Table</a>
+    <a class="btn btn-secondary btn-lg" href="{% url 'menu_list' %}" role="button">View Menu</a>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <h3 class="card-title">Our Menu</h3>
+                <p class="card-text">Explore our diverse menu featuring a variety of delicious dishes prepared by our expert chefs.</p>
+                <a href="{% url 'menu_list' %}" class="btn btn-outline-primary">View Menu</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <h3 class="card-title">Book a Table</h3>
+                <p class="card-text">Reserve your table in advance to ensure a seamless dining experience at Adel's Restaurant.</p>
+                <a href="{% url 'booking_create' %}" class="btn btn-outline-primary">Make Reservation</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <h3 class="card-title">Special Events</h3>
+                <p class="card-text">Host your special occasions with us. We offer customized packages for all celebrations.</p>
+                <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <h2 class="text-center mb-4">About Adel's Restaurant</h2>
+        <p>Adel's Restaurant has been serving the community with delicious food and exceptional service since 2010. Our restaurant offers a warm and inviting atmosphere perfect for family dinners, romantic dates, or business meetings.</p>
+        <p>Our team of experienced chefs prepares each dish with the freshest ingredients and attention to detail. We take pride in our diverse menu that caters to various tastes and dietary preferences.</p>
+    </div>
+</div>
+{% endblock %}
+

@@ -80,6 +80,7 @@ WSGI_APPLICATION = "adels_restaurant_project.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
+        'NAME': BASE_DIR / 'db.sqlite3',
         'NAME': 'adels_restaurant',
         'USER': 'postgres',
         'PASSWORD': 'your_password',
